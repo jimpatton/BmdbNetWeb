@@ -24,14 +24,18 @@ namespace BmdbNetWeb.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Credit>>> GetCredits()
         {
-            return await _context.Credits.ToListAsync();
+            var credits = _context.Credits.Include(c => c.Movie)
+                                          .Include(c => c.Actor);
+            return await credits.ToListAsync();
         }
 
         // GET: api/Credits/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Credit>> GetCredit(int id)
         {
-            var credit = await _context.Credits.FindAsync(id);
+            var credit = await _context.Credits.Include(c => c.Movie)
+                                               .Include(c => c.Actor)
+                                               .FirstOrDefaultAsync(c => c.Id == id);
 
             if (credit == null)
             {

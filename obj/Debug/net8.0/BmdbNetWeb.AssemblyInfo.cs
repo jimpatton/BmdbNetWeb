@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BmdbNetWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a26f9d2256824cb088ff3e4ed8e7aaacb80137f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("BmdbNetWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BmdbNetWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
